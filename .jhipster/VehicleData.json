@@ -1,0 +1,46 @@
+{
+    "name": "VehicleData",
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "speed",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "fuelLevel",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "timeStamp",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190313084938",
+    "entityTableName": "vehicle_data",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "cvgs",
+        "vds"
+    ],
+    "microserviceName": "vds"
+}

@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "sv"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "se.alten.challenge",
+    "packageFolder": "se/alten/challenge",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "vds",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "buildTool": "maven",
+    "serverPort": "8082",
+    "skipUserManagement": true,
+    "jhipsterVersion": "5.8.2",
+    "clientPackageManager": "npm",
+    "jwtSecretKey": "ZDA2MTQ5YTM5Njc1ZDVjYmUzODc1NjAzODNhM2E3NzU4ZDkyYWMyOGE4YThjOGZlNGNlMDU5OTkxYjkyZmZhOTdjODYzMTkyYjI3MTIxN2Q3MThmMzE0NjlhZjZhMzk0NzNmNjkxZDg1ZjlhMzViYzg2YTYxZGMzODkyNGM1Y2U=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "entities": [
+    "VehicleConnectionStatus",
+    "VehicleConnectionStatusHistory",
+    "VehicleData"
+  ]
+}

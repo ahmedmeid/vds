@@ -1,0 +1,36 @@
+{
+    "name": "VehicleConnectionStatus",
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "unique",
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "ConnectionStatus",
+            "fieldValues": "CONNECTED,DISCONNECTED"
+        },
+        {
+            "fieldName": "lastUpdated",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190313084936",
+    "entityTableName": "vehicle_connection_status",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "cvgs",
+        "vds"
+    ],
+    "microserviceName": "vds"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "VehicleConnectionStatusHistory",
+    "fields": [
+        {
+            "fieldName": "vehicleId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "statusAt",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190313084937",
+    "entityTableName": "vehicle_connection_status_history",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "cvgs",
+        "vds"
+    ],
+    "microserviceName": "vds"
+}

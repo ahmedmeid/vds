@@ -36,7 +36,7 @@ script:
   - ./mvnw clean test
   - ./mvnw org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar -Dsonar.organization=ahmedmeid-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
   - ./mvnw package -Pprod verify jib:dockerBuild
-  - docker image tag cvgs $DOCKER_USERNAME/vds:$TRAVIS_BUILD_ID
+  - docker image tag vds $DOCKER_USERNAME/vds:$TRAVIS_BUILD_ID
   - docker push $DOCKER_USERNAME/vds:$TRAVIS_BUILD_ID
 notifications:
   webhooks:

@@ -65,7 +65,12 @@ public class VehicleConnectionStatusResource {
     public ResponseEntity<VehicleConnectionStatus> updateVehicleConnectionStatus(@Valid @RequestBody VehicleConnectionStatus vehicleConnectionStatus) throws URISyntaxException {
         log.debug("REST request to update VehicleConnectionStatus : {}", vehicleConnectionStatus);
         if (vehicleConnectionStatus.getId() == null) {
-            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+           // throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+          List <VehicleConnectionStatus> vehiclesStatuses = vehicleConnectionStatusRepository.findByVehicleId(vehicleConnectionStatus.getVehicleId());
+          if(vehiclesStatuses.isEmpty()) {
+        	  throw new BadRequestAlertException("Invalid vehicle id", ENTITY_NAME, "vehicle id");	  
+          }
+          vehicleConnectionStatus.setId(vehiclesStatuses.get(0).getId());
         }
         VehicleConnectionStatus result = vehicleConnectionStatusRepository.save(vehicleConnectionStatus);
         return ResponseEntity.ok()

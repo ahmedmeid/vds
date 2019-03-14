@@ -2,6 +2,9 @@ package se.alten.challenge.repository;
 
 import se.alten.challenge.domain.VehicleConnectionStatus;
 import org.springframework.data.mongodb.repository.Query;
+
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +15,7 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unused")
 @Repository
 public interface VehicleConnectionStatusRepository extends MongoRepository<VehicleConnectionStatus, String> {
+	
+	List<VehicleConnectionStatus> findByVehicleId(String vehicleId);
 
 }

@@ -37,7 +37,9 @@ script:
   - ./mvnw org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar -Dsonar.organization=ahmedmeid-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
   - ./mvnw package -Pprod verify jib:dockerBuild
   - docker image tag vds $DOCKER_USERNAME/vds:$TRAVIS_BUILD_ID
-  - docker push $DOCKER_USERNAME/vds
+  - docker image tag vds $DOCKER_USERNAME/vds:latest
+  - docker push $DOCKER_USERNAME/vds:$TRAVIS_BUILD_ID
+  - docker push $DOCKER_USERNAME/vds:latest 
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
